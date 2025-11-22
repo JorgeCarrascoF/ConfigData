@@ -23,4 +23,8 @@ management:
         include: "*"
   gateway:
     access: read-only
+  endpoint:
+    health:
+      show-details: always
+
 
