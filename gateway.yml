@@ -28,4 +28,7 @@ management:
     health:
       show-details: always
 
+spring:
+  security:
+    enabled: false
 
