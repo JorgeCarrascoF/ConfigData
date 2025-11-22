@@ -14,7 +14,6 @@ spring:
 eureka:
   client:
     service-url:
-
       defaultZone: http://localhost:8761/eureka/
 
 management:
@@ -24,3 +23,4 @@ management:
         include: "*"
   gateway:
     access: read-only
+
