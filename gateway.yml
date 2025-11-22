@@ -20,12 +20,12 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,beans,mappings,metrics,httptrace,env,threaddump,loggers,conditions
+        include: health,info,beans,mappings,metrics,httptrace,env,threaddump,loggers,conditions,gateway
   gateway:
     access: read-only
+    enabled: true
   endpoint:
     health:
       show-details: always
-
 
 
