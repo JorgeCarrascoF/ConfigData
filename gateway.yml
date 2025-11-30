@@ -35,7 +35,7 @@ spring:
           predicates:
             - Path=/api/v1/pedidos-proveedor/**
 
-        - id: invoic-client-service
+        - id: invoice-client-service
           uri: lb://FACTURACION
           predicates:
             - Path=/api/v1/facturas-cliente/**
@@ -55,3 +55,4 @@ management:
       enabled: true
     health:
       show-details: always
+
