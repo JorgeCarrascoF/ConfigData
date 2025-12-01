@@ -18,12 +18,8 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-        routes:
-        - id: global-strip
-          predicates:
-            - Path=/**      
-          filters:
-            - StripPrefix=1
+      default-filters:
+        - StripPrefix=1
 
 management:
   endpoints:
@@ -35,6 +31,7 @@ management:
       access: unrestricted
     health:
       show-details: always
+
 
 
 
