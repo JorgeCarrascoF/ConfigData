@@ -14,31 +14,10 @@ spring:
 
   cloud:
     gateway:
-      routes:
-        - id: inventario-service
-          uri: lb://INVENTARIO
-          predicates:
-            - Path=/api/v1/productos{segment:.*}
-
-        - id: client-order-service
-          uri: lb://PEDIDOSCLIENTE
-          predicates:
-            - Path=/api/v1/pedidos-cliente{segment:.*}
-
-        - id: provider-order-service
-          uri: lb://PEDIDOSPROVEEDOR
-          predicates:
-            - Path=/api/v1/pedidos-proveedor{segment:.*}
-
-        - id: invoice-client-service
-          uri: lb://FACTURACION
-          predicates:
-            - Path=/api/v1/facturas-cliente{segment:.*}
-
-        - id: invoice-provider-service
-          uri: lb://FACTURACION
-          predicates:
-            - Path=/api/v1/facturas-proveedor{segment:.*}
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
 management:
   endpoints:
@@ -50,6 +29,7 @@ management:
       enabled: true
     health:
       show-details: always
+
 
 
 
